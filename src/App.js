@@ -4,12 +4,14 @@ import Login from "./Login";
 
 function App() {
 	return (
-		<Router>
-			<Routes>
-				<Route path="/signup" element={<Signup />} />
-				<Route path="/login" element={<Login />} />
-			</Routes>
-		</Router>
+		<div className="min-h-screen flex items-center justify-center bg-gray-100">
+			<Router>
+				<Routes>
+					<Route path="/" element={<Signup />} />
+					<Route path="/login" element={<Login />} />
+				</Routes>
+			</Router>
+		</div>
 	);
 }
 
