@@ -3,6 +3,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import { MoveDownIcon } from "lucide-react";
 
 const Signup = () => {
 	const [formData, setFormData] = useState({
@@ -60,6 +61,13 @@ const Signup = () => {
 					Welcome to DSA List
 				</h1>
 			</div>
+
+			<div>
+				<h3 className="text-xl font-bold mb-10 flex">
+					Register here
+					<MoveDownIcon className="h-6" />
+				</h3>
+			</div>
 			<form
 				onSubmit={handleSubmit}
 				className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md space-y-4"
@@ -98,6 +106,15 @@ const Signup = () => {
 					Signup
 				</button>
 			</form>
+			<div>
+				<h3 className="text-sm font-bold mt-10">
+					Already Registered?{" "}
+					<a href="/login" className="underline text-gray-800">
+						{" "}
+						Click here for Login{" "}
+					</a>
+				</h3>
+			</div>
 		</div>
 	);
 };
